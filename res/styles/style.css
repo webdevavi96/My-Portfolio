@@ -1,0 +1,252 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+body{
+  background: #0d2627;
+  color: white;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #cadfdb;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo{
+  height: 30px;
+  width: 30px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+.nav-item{
+  padding: 5px;
+  color: #1c4f51;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: #00bcd4;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+section{
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 15px;
+  padding-top: 20px;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Adjusts spacing between image and text */
+    padding: 50px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.img-container {
+    max-width: 50%;
+}
+.img-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    max-width: 50%; /* Adjust the width as needed */
+}
+
+.img-container img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 300px; /* Adjust based on your design */
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+#about {
+  background: #1a3c3d;
+  color: #e0f7fa;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+  margin: 40px auto;
+  width: 100vw;
+}
+
+#about h2 {
+  color: #00bcd4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about p {
+  line-height: 1.6;
+}
+
+#about table {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  color: #e0f7fa;
+}
+
+#about table td {
+  padding: 10px;
+  border-bottom: 1px solid #2a4e4f;
+}
+
+#about table tr:last-child td {
+  border-bottom: none;
+}
+
+#skills {
+  background: #1a3c3d;
+  color: #e0f7fa;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+  margin: 40px auto;
+  width: 100%;
+  text-align: center;
+}
+
+#skills h1 {
+  color: #00bcd4;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  display: inline-block;
+  margin: 15px 20px;
+  font-size: 1.2em;
+  color: #e0f7fa;
+  transition: transform 0.3s ease;
+}
+
+#skills ul li i {
+  font-size: 2em;
+  margin-right: 8px;
+}
+
+#skills ul li:hover {
+  transform: scale(1.1);
+  color: #00bcd4;
+}
+
+
+.projects-section {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects-section h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-item {
+  background: linear-gradient(145deg, #ffffff, #e3e3e3);
+  color: #343a40;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.project-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
+
+
+footer {
+  background-color: #000000;  /* Black background */
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  color: #ffffff;  /* White text */
+  font-family: 'Poppins', sans-serif;  /* Using a cool, modern font */
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #ffffff;  /* White color for links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #f39c12;  /* Golden color for hover effect */
+}
