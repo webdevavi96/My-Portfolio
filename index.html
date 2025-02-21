@@ -1,157 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Avinash Chaurasiya, a full-stack web developer specializing in Django and JavaScript. Explore my projects and skills.">
-  <title></title>
+  <meta property="og:title" content="Avinash Chaurasiya - Full-Stack Web Developer">
+  <meta property="og:description" content="Portfolio of Avinash Chaurasiya, a full-stack web developer specializing in Django and JavaScript.">
+  <meta property="og:image" content="/res/img/assets/userImage.png">
+  <meta property="og:url" content="https://your-portfolio-url.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Avinash Chaurasiya - Full-Stack Web Developer</title>
   
+  <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="/res/styles/style.css" type="text/css" media="all" />
-  
-   <!-- EmailJS -->
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
- <script>
-   // Initialize EmailJS with your user ID
-   emailjs.init("pBmdutdyOQvBVxmln");
- </script>
+  <!-- Smooth Scrolling -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="logo-container">
       <a href="/"><img src="/res/img/assets/logo.png" alt="User Logo" class="logo"></a>
     </div>
-<nav>
-  <ul>
-    <li><a class="nav-item" href="#about">About Me</a></li>
-    <li><a class="nav-item" href="#skills">My Skills</a></li>
-    <li><a class="nav-item" href="#projects">My Works</a></li>
-    <li><a class="nav-item" href="#contact">Contact Me</a></li>
-  </ul>
-</nav>
-      </header>
-      
-      <main>
-        <section class = "hero-section">
-          <div class="details">
-            <h1>Avinash Chaurasiya</h1>
-            <h3>Full - Stack Web Developer</h3>
-            <p>Hello! I'm Avinash Chaurasiya, a computer science student from India. I have a deep passion for building interactive and dynamic websites that offer excellent user experiences.
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="/res/img/assets/userImage.png" alt="User Image" />
-          </div>
-        </section>
-        <section id="about">
-          <h2>
-            About Me
-          </h2>
-          <p>I’m a passionate full-stack developer with a strong foundation in Django and JavaScript, currently building scalable web applications. As a fresher and college student, I’m dedicated to learning and growing in the field of web development.</p>
-          <p>I have hands-on experience in Django, JavaScript, and full-stack development, and I’m currently working on an Alumni Meet Web App for my college, ensuring its scalability for future growth. My skills include:</p>
-          <table>
-            <tr>
-              <td>Backend Development:</td>
-              <td>Django, Python</td>
-            </tr>
-            <tr>
-              <td>Frontend Development:</td>
-              <td>HTML, CSS, JavaScript, Bootstrap</td>
-            </tr>
-          </table>
-          <p>I thrive on solving complex problems and creating efficient, user-friendly web solutions. If you're looking for a dedicated Django developer who loves building impactful applications, let's connect!</p>
-        </section>
-        <section id="skills">
-          <h1>My Skills</h1>
-          <ul>
-            <li><i class="fa-brands fa-html5" style="color: red;"></i> HTML</li>
-            <li><i class="fa-brands fa-css3-alt" style="color: #1572b6"></i> CSS</li>
-            <li><i class="fa-brands fa-bootstrap" style="color: #563d7c"></i> Bootstrap</li>
-            <li><i class="fa-brands fa-js-square" style="color: #f7df1e"></i> JavaScript</li>
-            <li><i class="fa-brands fa-python" style="color: #306998"></i> Python (Basic)</li>
-            <li><i class="fa fa-cogs" style="color: #092e20"></i> Django</li>
-            <li><i class="fa-brands fa-cuttlefish" style="color: #A8B9CC"></i> C</li>
-            <li><i class="fa-brands fa-cuttlefish" style="color: #00599C"></i> C++</li>
-            <li><i class="fa-brands fa-php" style="color: #8993be"></i> PHP</li>
-            <li><i class="fa-solid fa-code-branch"></i> Full Stack Development</li>
-            <li><i class="fa-solid fa-laptop-code"></i> Front End Development</li>
-          </ul>
-        </section>
-        <section id="projects" class="projects-section">
-          <h1>My Projects</h1>
-          <div class="project-list">
-            <div class="project-item">
-              <h2>Travel Vista</h2>
-              <p>
-                A full-stack travel website built using Django, featuring dynamic itineraries, user authentication, and responsive design.
-                Hosted on PythonAnywhere.
-              </p>
-              <a href="https://webdevavi96.pythonanywhere.com/" class="project-link">View Project</a>
-            </div>
-            <div class="project-item">
-              <h2>Portfolio Website</h2>
-              <p>
-                A personal portfolio website designed to showcase my skills and projects, built with HTML, CSS, and JavaScript.
-              </p>
-              <a href="#" class="project-link">View Project</a>
-            </div>
-            <div class="project-item">
-              <h2>Netflix Clone</h2>
-              <p>
-                A fun front-end project where I recreated the Netflix user interface using HTML, CSS, and JavaScript. The clone includes a responsive layout and interactive UI elements.
-              </p>
-              <a href="#" class="project-link">View Project</a>
-              <p style="color: red">
-                Due to some reasons Netflix clone link is not available..
-              </p>
-            </div>
-          </div>
-        </section>
-        <section id="contact">
-           <div class="container my-5 text-white">
-    <div class="row">
-      <!-- Message Container -->
-      <div class="col-md-6 message-container">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need further information, feel free to reach out. We're here to assist you!</p>
-      </div>
+    <nav>
+      <ul>
+        <li><a class="nav-item" href="#about" aria-label="About Me">About Me</a></li>
+        <li><a class="nav-item" href="#skills" aria-label="My Skills">My Skills</a></li>
+        <li><a class="nav-item" href="#projects" aria-label="My Works">My Works</a></li>
+        <li><a class="nav-item" href="#contact" aria-label="Contact Me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="details">
+      <h1>Avinash Chaurasiya</h1>
+      <h3>Full-Stack Web Developer</h3>
+      <p>Hello! I'm Avinash Chaurasiya, a computer science student from India. I have a deep passion for building interactive and dynamic websites that offer excellent user experiences.</p>
+      <a href="/res/downloads/My_Resume/My_Resume.pdf" class="btn btn-primary mt-3">Download Resume</a>
+    </div>
+    <div class="img-container">
+      <img src="/res/img/assets/userImage.png" alt="User Image" />
+    </div>
+  </section>
+  
+  <!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate full-stack web developer with a strong foundation in Django and JavaScript. I specialize in building scalable web applications with dynamic user experiences. Currently, I am working on an alumni meet web app to gift to my college, showcasing my skills in Django and responsive web design.
+  </p>
+  <table>
+    <tr>
+      <td>Backend Development:</td>
+      <td>Django, Python</td>
+    </tr>
+    <tr>
+      <td>Frontend Development:</td>
+      <td>HTML, CSS, JavaScript, Bootstrap</td>
+    </tr>
+    <tr>
+      <td>Full-Stack Skills:</td>
+      <td>RESTful APIs, Single Page Applications</td>
+    </tr>
+    <tr>
+      <td>Current Focus:</td>
+      <td>Scalable web apps, Role-based user systems</td>
+    </tr>
+    <tr>
+      <td>Projects:</td>
+      <td>Travel Vista, Netflix Clone, Portfolio Website</td>
+    </tr>
+  </table>
+</section>
+  
+  <!-- Skills Section -->
+  <section id="skills">
+    <h1>My Skills</h1>
+    <ul>
+      <li><i class="fab fa-html5" style="color: red;"></i> HTML</li>
+      <li><i class="fab fa-css3-alt" style="color: #1572b6"></i> CSS</li>
+      <li><i class="fab fa-js-square" style="color: #f7df1e"></i> JavaScript</li>
+      <li><i class="fa fa-cogs" style="color: #092e20"></i> Django</li>
+        <li><i class="fa-brands fa-bootstrap" style="color: #563d7c"></i> Bootstrap</li>
+         <li><i class="fa-solid fa-code-branch"></i> Full Stack Development</li>
+   <li><i class="fa-solid fa-laptop-code"></i> Front End Development</li>
+    </ul>
+    <p style="color: orangered; font-size: 1.2rem;">I have Basic Knowledge About These Languages to</p>
+    <ul>
+       <li><i class="fa-brands fa-cuttlefish" style="color: #A8B9CC"></i></li>
+ <li><i class="fa-brands fa-cuttlefish" style="color: #00599C"></i>++</li>
+ <li><i class="fa-brands fa-php" style="color: #8993be"></i> PHP</li>
+ <li><i class="fa-brands fa-python" style="color: #306998"></i> Python</li>
 
-      <!-- Form Container -->
-      <div class="col-md-6 form-container">
-        <h3>Send Us a Message</h3>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <p id="status" class="mt-3"></p>
-      </div>
+    </ul>
+  </section>
+  
+  <!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <h1>My Projects</h1>
+  <div class="project-list">
+    <div class="project-item">
+      <h2>Travel Vista</h2>
+      <p>
+        A full-stack travel website built using Django, featuring dynamic itineraries, user authentication, and responsive design.
+      </p>
+      <a href="https://webdevavi96.pythonanywhere.com/" class="project-link">View Project</a>
+    </div>
+    
+    <div class="project-item">
+      <h2>Alumni Meet Web App</h2>
+      <p>
+        A Django-based scalable web application designed for connecting alumni, students, and teachers. The app includes role-based features:
+      <ul>
+        <li><strong>Teachers:</strong> Host meetings, mentor students, and moderate discussions.</li>
+        <li><strong>Students:</strong> Join meetings, search alumni, and send connection requests.</li>
+        <li><strong>Alumni:</strong> Host meetings, post job opportunities, and mentor students.</li>
+      </ul>
+      This project is being developed as a gift to my college, ensuring long-term scalability and dynamic user experiences.
+      </p>
+      <a href="#" class="project-link">View Project</a>
+      <p style="color: red">Link will be available soon as the project is in development.</p>
+    </div>
+    
+    <div class="project-item">
+      <h2>Portfolio Website</h2>
+      <p>
+        A personal portfolio website designed to showcase my skills and projects, built with HTML, CSS, and JavaScript.
+      </p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+    
+    <div class="project-item">
+      <h2>Netflix Clone</h2>
+      <p>
+        A fun front-end project where I recreated the Netflix user interface using HTML, CSS, and JavaScript. The clone includes a responsive layout and interactive UI elements.
+      </p>
+      <a href="#" class="project-link">View Project</a>
+      <p style="color: red">
+        Due to some reasons, Netflix clone link is not available.
+      </p>
     </div>
   </div>
-
-        </section>
-        <footer>
-          <p>&copy; 2024 <a href="https://github.com/webdevavi96" target="_blank">Avinash Chaurasiya</a>. All rights reserved.</p>
-        </footer>
-      </main>
+</section>
   
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container my-5 text-white">
+      <h3>Send Me a Message</h3>
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="status" class="mt-3"></p>
+      </form>
+    </div>
+  </section>
   
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 <a href="https://github.com/webdevavi96" target="_blank">Avinash Chaurasiya</a>. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/webdevavi96" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p style="color: red;">If You want all projects source code, Then wait untill I upload here and amke them to ready for download.</p>
+  </footer>
   
-  <script src="/res/scripts/form.js"></script> <!-- Link to your form.js -->
-  <!-- Bootstrap JS and dependencies -->
+  <!-- Scripts -->
+  <script src="/res/scripts/form.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
