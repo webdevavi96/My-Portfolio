@@ -10,10 +10,8 @@
   <meta property="og:image" content="/res/img/assets/userImage.png">
   <meta property="og:url" content="https://your-portfolio-url.com">
   <meta name="twitter:card" content="summary_large_image">
- <meta name="google-site-verification" content="pMMl1CzvOq3rGkKdb9MwGaN5rwrhPIS_tsygL9nJ5mc" />
   <title>Avinash Chaurasiya - Full-Stack Web Developer</title>
   <link rel="shortcut icon" href="/res/img/assets/logo.png" type="image/x-icon" />
-  
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome Icons -->
@@ -30,170 +28,181 @@
 
 <body>
   <div class="loader">
-      <video class="loading" autoplay loop muted>
-    <source src="/res/img/assets/Loader.webm" type="video/webm" />
-  </video>
+    <video class="loading" autoplay loop muted>
+      <source src="/res/img/assets/Loader.webm" type="video/webm" />
+    </video>
   </div>
   <div class="content-body">
-  <!-- Header -->
-  <header>
-    <div class="logo-container">
-      <a href="/"><img src="/res/img/assets/logo.png" alt="User Logo" class="logo"></a>
-    </div>
-    <nav>
+    <!-- Header -->
+    <header>
+      <div class="logo-container">
+        <a href="/"><img src="/res/img/assets/logo.png" alt="User Logo" class="logo"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="nav-item" href="#about" aria-label="About Me">About Me</a></li>
+          <li><a class="nav-item" href="#skills" aria-label="My Skills">My Skills</a></li>
+          <li><a class="nav-item" href="#projects" aria-label="My Works">My Works</a></li>
+          <li><a class="nav-item" href="#contact" aria-label="Contact Me">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="details">
+        <h1>Avinash Chaurasiya</h1>
+        <h3>Full-Stack Web Developer</h3>
+        <p>Hello! I'm Avinash Chaurasiya, a computer science student from India. I have a deep passion for building interactive and dynamic websites that offer excellent user experiences.</p>
+        <a href="/res/downloads/My_Resume/My_Resume.pdf" class="btn btn-primary mt-3">Download Resume</a>
+      </div>
+      <div class="img-container">
+<img src="/res/img/assets/userImage.webp" alt="User Image" />
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate full-stack web developer with a strong foundation in Django and JavaScript. I specialize in building scalable web applications with dynamic user experiences. Currently, I am working on an alumni meet web app to gift to my college, showcasing my skills in Django and responsive web design.
+      </p>
+      <table>
+        <tr>
+          <td>Backend Development:</td>
+          <td>Django, Python</td>
+        </tr>
+        <tr>
+          <td>Frontend Development:</td>
+          <td>HTML, CSS, JavaScript, Bootstrap</td>
+        </tr>
+        <tr>
+          <td>Full-Stack Skills:</td>
+          <td>RESTful APIs, Single Page Applications</td>
+        </tr>
+        <tr>
+          <td>Current Focus:</td>
+          <td>Scalable web apps, Role-based user systems</td>
+        </tr>
+        <tr>
+          <td>Projects:</td>
+          <td>Travel Vista, Netflix Clone, Portfolio Website</td>
+        </tr>
+      </table>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+      <h1>My Skills</h1>
       <ul>
-        <li><a class="nav-item" href="#about" aria-label="About Me">About Me</a></li>
-        <li><a class="nav-item" href="#skills" aria-label="My Skills">My Skills</a></li>
-        <li><a class="nav-item" href="#projects" aria-label="My Works">My Works</a></li>
-        <li><a class="nav-item" href="#contact" aria-label="Contact Me">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="details">
-      <h1>Avinash Chaurasiya</h1>
-      <h3>Full-Stack Web Developer</h3>
-      <p>Hello! I'm Avinash Chaurasiya, a computer science student from India. I have a deep passion for building interactive and dynamic websites that offer excellent user experiences.</p>
-      <a href="/res/downloads/My_Resume/My_Resume.pdf" class="btn btn-primary mt-3">Download Resume</a>
-    </div>
-    <div class="img-container">
-      <img src="/res/img/assets/userImage.webp" alt="User Image" />
-    </div>
-  </section>
-  
-  <!-- About Section -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate full-stack web developer with a strong foundation in Django and JavaScript. I specialize in building scalable web applications with dynamic user experiences. Currently, I am working on an alumni meet web app to gift to my college, showcasing my skills in Django and responsive web design.
-  </p>
-  <table>
-    <tr>
-      <td>Backend Development:</td>
-      <td>Django, Python</td>
-    </tr>
-    <tr>
-      <td>Frontend Development:</td>
-      <td>HTML, CSS, JavaScript, Bootstrap</td>
-    </tr>
-    <tr>
-      <td>Full-Stack Skills:</td>
-      <td>RESTful APIs, Single Page Applications</td>
-    </tr>
-    <tr>
-      <td>Current Focus:</td>
-      <td>Scalable web apps, Role-based user systems</td>
-    </tr>
-    <tr>
-      <td>Projects:</td>
-      <td>Travel Vista, Netflix Clone, Portfolio Website</td>
-    </tr>
-  </table>
-</section>
-  
-  <!-- Skills Section -->
-  <section id="skills">
-    <h1>My Skills</h1>
-    <ul>
-      <li><i class="fab fa-html5" style="color: red;"></i> HTML</li>
-      <li><i class="fab fa-css3-alt" style="color: #1572b6"></i> CSS</li>
-      <li><i class="fab fa-js-square" style="color: #f7df1e"></i> JavaScript</li>
-      <li><i class="fa fa-cogs" style="color: #092e20"></i> Django</li>
+        <li><i class="fab fa-html5" style="color: red;"></i> HTML</li>
+        <li><i class="fab fa-css3-alt" style="color: #1572b6"></i> CSS</li>
+        <li><i class="fab fa-js-square" style="color: #f7df1e"></i> JavaScript</li>
+        <li><i class="fa fa-cogs" style="color: #092e20"></i> Django</li>
         <li><i class="fa-brands fa-bootstrap" style="color: #563d7c"></i> Bootstrap</li>
-         <li><i class="fa-solid fa-code-branch"></i> Full Stack Development</li>
-   <li><i class="fa-solid fa-laptop-code"></i> Front End Development</li>
-    </ul>
-    <p style="color: orangered; font-size: 1.2rem;">I have Basic Knowledge About These Languages to</p>
-    <ul>
-       <li><i class="fa-brands fa-cuttlefish" style="color: #A8B9CC"></i></li>
- <li><i class="fa-brands fa-cuttlefish" style="color: #00599C"></i>++</li>
- <li><i class="fa-brands fa-php" style="color: #8993be"></i> PHP</li>
- <li><i class="fa-brands fa-python" style="color: #306998"></i> Python</li>
-
-    </ul>
-  </section>
-  
-  <!-- Projects Section -->
-<section id="projects" class="projects-section">
-  <h1>My Projects</h1>
-  <div class="project-list">
-    <div class="project-item">
-      <h2>Travel Vista</h2>
-      <p>
-        A full-stack travel website built using Django, featuring dynamic itineraries, user authentication, and responsive design.
-      </p>
-      <a href="https://webdevavi96.pythonanywhere.com/" class="project-link">View Project</a>
-      <a href="/res/downloads/Project_Source_Codes/Travel_Website_in_Django.zip" class="btn btn-primary mt-3">Download Source Code</a>
-    </div>
-    
-    <div class="project-item">
-      <h2>Portfolio Website</h2>
-      <p>
-        A personal portfolio website designed to showcase my skills and projects, built with HTML, CSS, and JavaScript.
-      </p>
-      <a href="#" class="project-link">View Project</a>
-    </div>
-    
-    <div class="project-item">
-      <h2>Netflix Clone</h2>
-      <p>
-        A fun front-end project where I recreated the Netflix user interface using HTML, CSS, and JavaScript. The clone includes a responsive layout and interactive UI elements.
-      </p>
-      <a href="#" class="project-link">View Project</a>
-      <p style="color: red">
-        Due to some reasons, Netflix clone link is not available.
-      </p>
-    </div>
-        <div class="project-item">
-      <h2>Alumni Meet Web App</h2>
-      <p>
-        A Django-based scalable web application designed for connecting alumni, students, and teachers. The app includes role-based features:
-      <ul>
-        <li><strong>Teachers:</strong> Host meetings, mentor students, and moderate discussions.</li>
-        <li><strong>Students:</strong> Join meetings, search alumni, and send connection requests.</li>
-        <li><strong>Alumni:</strong> Host meetings, post job opportunities, and mentor students.</li>
+        <li><i class="fa-solid fa-code-branch"></i> Full Stack Development</li>
+        <li><i class="fa-solid fa-laptop-code"></i> Front End Development</li>
       </ul>
-      <span style="color: navy;">This project is being developed as a gift to my college, ensuring long-term scalability and dynamic user experiences.
-      </span>
-      </p>
-      <a href="#" class="project-link">View Project</a>
-      <p style="color: red">Link will be available soon as the project is in development.</p>
-    </div>
+      <p style="color: orangered; font-size: 1.2rem;">I have Basic Knowledge About These Languages to</p>
+      <ul>
+        <li><i class="fa-brands fa-cuttlefish" style="color: #A8B9CC"></i></li>
+        <li><i class="fa-brands fa-cuttlefish" style="color: #00599C"></i>++</li>
+        <li><i class="fa-brands fa-php" style="color: #8993be"></i> PHP</li>
+        <li><i class="fa-brands fa-python" style="color: #306998"></i> Python</li>
+        
+      </ul>
+    </section>
     
-  </div>
-</section>
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container my-5 text-white">
-      <h3>Send Me a Message</h3>
-      <form id="contactForm">
-        <div class="form-group">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h1>My Projects</h1>
+      <div class="project-list">
+        <div class="project-item">
+          <h2>Travel Vista</h2>
+          <p>
+            A full-stack travel website built using Django, featuring dynamic itineraries, user authentication, and responsive design.
+          </p>
+          <div class="btn-container">
+            <a href="https://webdevavi96.pythonanywhere.com/" class="project-link">View Project</a>
+            <button class="btn btn-primary source_code">Download Source Code</button>
+          </div>
         </div>
-        <div class="form-group">
-          <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+        
+        <div class="project-item">
+          <h2>Portfolio Website</h2>
+          <p>
+            A personal portfolio website designed to showcase my skills and projects, built with HTML, CSS, and JavaScript.
+          </p>
+          <div class="btn-container">
+            <a href="#" class="project-link">View Project</a>
+            <button class="btn btn-primary source_code">Download Source Code</button>
+          </div>
         </div>
-        <div class="form-group">
-          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        
+        <div class="project-item">
+          <h2>Netflix Clone</h2>
+          <p>
+            A fun front-end project where I recreated the Netflix user interface using HTML, CSS, and JavaScript. The clone includes a responsive layout and interactive UI elements.
+          </p>
+          <div class="btn-container">
+            <a href="#" class="project-link">View Project</a>
+            <button class="btn btn-primary source_code">Download Source Code</button>
+          </div>
+          <p style="color: red" class="mt-5 ">
+            Due to some reasons, Netflix clone link is not available.
+          </p>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p id="status" class="mt-3"></p>
-      </form>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 <a href="https://github.com/webdevavi96" target="_blank">Avinash Chaurasiya</a>. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://github.com/webdevavi96" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p style="color: red;">If You want all projects source code, Then wait untill I upload here and amke them to ready for download.</p>
-  </footer>
+        <div class="project-item">
+          <h2>Alumni Meet Web App</h2>
+          <p>
+            A Django-based scalable web application designed for connecting alumni, students, and teachers. The app includes role-based features:
+          <ul>
+            <li><strong>Teachers:</strong> Host meetings, mentor students, and moderate discussions.</li>
+            <li><strong>Students:</strong> Join meetings, search alumni, and send connection requests.</li>
+            <li><strong>Alumni:</strong> Host meetings, post job opportunities, and mentor students.</li>
+          </ul>
+          <span style="color: navy;">This project is being developed as a gift to my college, ensuring long-term scalability and dynamic user experiences.
+          </span>
+          </p>
+          <div class="btn-container">
+            <a href="#" class="project-link">View Project</a>
+            <button class="btn btn-primary source_code">Download Source Code</button>
+          </div>
+          <p style="color: red" class="mt-5 ">Link will be available soon as the project is in development.</p>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container my-5 text-white">
+        <h3>Send Me a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p id="status" class="mt-3"></p>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 <a href="https://github.com/webdevavi96" target="_blank">Avinash Chaurasiya</a>. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/webdevavi96" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p style="color: red;">If You want all projects source code, Then wait untill I upload here and amke them to ready for download.</p>
+    </footer>
   </div>
   
   
