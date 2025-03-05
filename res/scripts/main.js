@@ -16,10 +16,7 @@ window.onload = () => {
 };
 
 
-
-const popUpButtons = document.querySelectorAll('.source_code');
-
-popUpButtons.forEach((button) => {
+document.querySelectorAll('.source_code').forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
     
@@ -31,31 +28,38 @@ popUpButtons.forEach((button) => {
     
     let div = document.createElement('div');
     div.classList.add('popOverTarget');
+    div.setAttribute("tabindex", "0");
+    div.setAttribute("aria-live", "polite");
     
+    let pre = document.createElement('pre');
     let codeBlock = document.createElement('code');
     
-    let projectTitle = button.parentElement.querySelector('h2').innerText;
-    let sourceCodeMessage = "";
-    
-    switch (projectTitle) {
-      case "Travel Vista":
-        sourceCodeMessage = "Source code for Travel Vista: \nGitHub: git clone https://github.com/webdevavi96/myproject.git";
-        break;
-      case "Portfolio Website":
-        sourceCodeMessage = "Source code for Portfolio Website: \nGitHub: git clone https://github.com/webdevavi96/My-Portfolio.git";
-        break;
-      case "Netflix Clone":
-        sourceCodeMessage = "Source code for Netflix Clone is currently unavailable.";
-        break;
-      case "Alumni Meet Web App":
-        sourceCodeMessage = "Source code for Alumni Meet Web App: \nAvailable soon...";
-        break;
-      default:
-        sourceCodeMessage = "Source code information not available.";
-    }
+    // Get project title correctly
+    let projectTitle = button.closest('.project-item')?.querySelector('h2')?.innerText.trim();
+    let sourceCodeMessage = getSourceCodeMessage(projectTitle);
     
     codeBlock.textContent = sourceCodeMessage;
-    div.appendChild(codeBlock);
+    pre.appendChild(codeBlock);
+    div.appendChild(pre);
+    
     button.after(div);
+    
+    // Add focus for accessibility
+    div.focus();
   });
 });
+
+function getSourceCodeMessage(projectTitle) {
+  switch (projectTitle) {
+    case "Travel Vista":
+      return "Source code for Travel Vista:\nGitHub: git clone https://github.com/webdevavi96/myproject.git";
+    case "Portfolio Website":
+      return "Source code for Portfolio Website:\nGitHub: git clone https://github.com/webdevavi96/My-Portfolio.git";
+    case "Netflix Clone":
+      return "Source code for Netflix Clone is currently unavailable.";
+    case "Alumni Meet Web App":
+      return "Source code for Alumni Meet Web App:\nAvailable soon...";
+    default:
+      return "Source code information not available.";
+  }
+}
