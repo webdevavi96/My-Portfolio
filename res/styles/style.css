@@ -82,6 +82,23 @@ section {
   scroll-margin-top: 30px;
 }
 
+.scroll{
+   animation: onScroll linear;
+   animation-timeline: view();
+   animation-range: entry 0 cover 42%;
+}
+
+@keyframes onScroll{
+   from{
+      opacity: 0;
+      transform: translateX(-100%);
+   }
+   to{
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
 /* Hero Section */
 .hero-section {
   display: flex;
@@ -101,7 +118,7 @@ section {
   font-size: 2.5rem;
 }
 
-.details h3 {
+.details h2 {
   color: #13FF94;
   font-size: 1.4rem;
 }
@@ -111,9 +128,8 @@ section {
 }
 
 .img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center ;
   max-width: 50%;
 }
 
@@ -286,12 +302,15 @@ footer a:hover {
   .hero-section {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
   
   .details,
   .img-container {
-    max-width: 100%;
+     margin-top: 20px;
+     max-width: 100%;
   }
+  
   
   
 
