@@ -1,30 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("status");
+  emailjs.init("pBmdutdyOQvBVxmln");
   
-  if (form) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent form submission
-      
-      // Display loading message
-      status.innerText = "Sending...";
-      
-      const serviceID = "service_ue9vxfh";
-      const templateID = "template_5nezzpy";
-      
-      emailjs.sendForm(serviceID, templateID, form)
-        .then(() => {
-          status.innerText = "Message sent successfully!";
-          status.style.color = "green";
-          form.reset(); // Reset form after submission
-        })
-        .catch((error) => {
-          status.innerText = "Failed to send the message. Please try again later.";
-          status.style.color = "red";
-          console.error("EmailJS Error:", error);
-        });
-    });
-  } else {
-    console.error("Form with ID 'contactForm' not found.");
-  }
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    const params = {
+      name: name,
+      email: email,
+      message: message
+    };
+    
+    const statusElement = document.getElementById("status");
+    statusElement.innerText = "Sending...";
+    statusElement.style.color = "blue";
+    
+    emailjs.send("service_ue9vxfh", "template_5nezzpy", params)
+      .then(function(response) {
+        statusElement.innerText = "Message sent successfully!";
+        statusElement.style.color = "green";
+        document.getElementById("contactForm").reset();
+      })
+      .catch(function(error) {
+        statusElement.innerText = "Failed to send message. Try again!";
+        statusElement.style.color = "red";
+      });
+  });
 });

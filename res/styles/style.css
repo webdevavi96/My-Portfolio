@@ -277,6 +277,9 @@ footer a:hover {
   color: #f39c12;
 }
 
+.social-links a{
+  padding: 5px;
+}
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .hero-section {
