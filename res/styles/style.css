@@ -80,6 +80,7 @@ nav ul li {
 /*Common css for all sections*/
 section {
   scroll-margin-top: 30px;
+  height: 100dvh;
 }
 
 .scroll{
@@ -215,6 +216,7 @@ section {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: auto;
 }
 
 .projects-section h1 {
@@ -267,6 +269,10 @@ section {
   color: red;
   margin-top: 10px;
   font-weight: bold;
+}
+
+#contact {
+   height: auto;
 }
 
 .highlight {
@@ -345,7 +351,7 @@ footer a:hover {
   max-width: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  bottom: 20%;
+  bottom: 70%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -354,7 +360,7 @@ footer a:hover {
 
 .popOverTarget pre {
   margin: 0;
-  padding: 10px;
+  padding: 8px;
   background: #252526;
   border-radius: 4px;
 }
@@ -425,7 +431,7 @@ footer a:hover {
 
 .project-detail img{
   height: 150px;
-  width: 50%;
+  aspect-ratio: 1;
   border-radius: 5px;
   box-shadow: 1px 1px 5px #000;
 }
