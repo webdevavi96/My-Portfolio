@@ -80,7 +80,6 @@ nav ul li {
 /*Common css for all sections*/
 section {
   scroll-margin-top: 30px;
-  height: 100dvh;
 }
 
 .scroll{
@@ -305,6 +304,9 @@ footer a:hover {
 }
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+   section{
+      height: 90dvh;
+   }
   .hero-section {
     flex-direction: column;
     text-align: center;
