@@ -107,6 +107,7 @@ section {
   gap: 20px;
   padding: 50px;
   padding-top: 18px;
+  height: 100dvh;
 }
 
 .details {
@@ -311,6 +312,7 @@ footer a:hover {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    max-height: 85dvh;
   }
   
   .details,
