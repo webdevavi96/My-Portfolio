@@ -15,20 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
       hoverSound.currentTime = 0; // Reset sound to start
       hoverSound.play();
     });
-  });
-
-  const scrollSound = new Audio('/res/sounds/scrollSound.mp3');
-  window.addEventListener('scroll', () => {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-      if (scrollSound.paused) {
-        scrollSound.play();
-      }
-      else{
-        scrollSound.currentTime = 0; // Reset sound to start
-      }
-    }
-  });
-
+  })
+  
   // Smooth scroll for nav links
   document.querySelectorAll('a.nav-link').forEach(link => {
     link.addEventListener('click', function (e) {
