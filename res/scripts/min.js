@@ -9,10 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // const hoverSound = new Audio('/res/sounds/hover.mp3');
-  // document.querySelectorAll('.skill-card, .project-card').forEach(card => {
-  //   card.addEventListener('mouseenter', () => hoverSound.play());
-  // });
+  const hoverSound = new Audio('/res/sounds/hoverSound.mp3');
+  document.querySelectorAll('.skill-card, .project-card, .nav-link').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      hoverSound.currentTime = 0; // Reset sound to start
+      hoverSound.play();
+    });
+  });
+
+  const scrollSound = new Audio('/res/sounds/scrollSound.mp3');
+  window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      if (scrollSound.paused) {
+        scrollSound.play();
+      }
+      else{
+        scrollSound.currentTime = 0; // Reset sound to start
+      }
+    }
+  });
 
   // Smooth scroll for nav links
   document.querySelectorAll('a.nav-link').forEach(link => {
@@ -43,4 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
     particle.style.animationDuration = (4 + Math.random() * 6) + 's';
     particleContainer.appendChild(particle);
   }
+
+  alert("Welcome to my portfolio! Hover over the links and cards for a surprise!");
 });
