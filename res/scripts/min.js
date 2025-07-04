@@ -9,13 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const hoverSound = new Audio('/res/sounds/hoverSound.mp3');
-  document.querySelectorAll('.skill-card, .project-card, .nav-link').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      hoverSound.currentTime = 0; // Reset sound to start
-      hoverSound.play();
-    });
-  })
   
   // Smooth scroll for nav links
   document.querySelectorAll('a.nav-link').forEach(link => {
@@ -47,5 +40,4 @@ document.addEventListener('DOMContentLoaded', function () {
     particleContainer.appendChild(particle);
   }
 
-  alert("Welcome to my portfolio! Hover over the links and cards for a surprise!");
 });

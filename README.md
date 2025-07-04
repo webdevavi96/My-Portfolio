@@ -1,7 +1,6 @@
-My-Portfolio 🌟
+# My-Portfolio 🌟
 
 This is an open-source Portfolio Website Template that I originally designed for myself. However, I later decided to share it with the world to help others showcase their skills, projects, and personality! Whether you're a developer, designer, or any creative, this template will help you shine online. ✨
-
 
 ---
 
@@ -15,29 +14,24 @@ This is an open-source Portfolio Website Template that I originally designed for
 💼 About Me: A creative space to tell your story.
 📞 Contact Form: Let others reach out to you effortlessly.
 
-
 ---
 
 🎯 Usage
 
 1. Clone the repository:
 
-git clone https://github.com/webdevavi96/My-Portfolio.git
-
+```bash
+git clone <https://github.com/webdevavi96/My-Portfolio.git>
 
 2. Navigate to the project folder:
 
 cd My-Portfolio
 
-
 3. Open index.html in your browser to preview.
-
 
 4. Customize the content in the HTML and CSS files to match your style.
 
-
-
-
+```
 ---
 
 🌟 Contributing
