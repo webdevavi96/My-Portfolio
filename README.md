@@ -32,12 +32,12 @@ cd My-Portfolio
 4. Customize the content in the HTML and CSS files to match your style.
 
 ```
+
 ---
 
 🌟 Contributing
 
 Contributions are always welcome! If you have ideas or improvements, feel free to fork the project and submit a pull request.
-
 
 ---
 
@@ -45,12 +45,11 @@ Contributions are always welcome! If you have ideas or improvements, feel free t
 
 This project is open-source under the MIT License.
 
-
 ---
 
 🌟 Preview
 
-<img src="res/img/assets/screenshots/Homepage.png" alt="Screenshot Description" width="600">
+<img src="res/img/assets/screenshots/Portfolio.png" alt="Screenshot Description" width="600">
 
 <img src="res/img/assets/screenshots/About-Us.png" alt="Screenshot Description" width="600">
 
@@ -62,4 +61,3 @@ This project is open-source under the MIT License.
 ---
 
 Let's build something amazing together! 🌟
-

@@ -38,7 +38,7 @@ nav{
 }
 
 .portfolio-header {
-  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  background: linear-gradient(120deg, #000055 0%, #3c0000 100%);
   border-bottom: 2px solid #00fff7;
   box-shadow: 0 4px 32px 0 rgba(0, 255, 247, 0.08);
 }
@@ -54,7 +54,7 @@ nav{
 }
 
 .portfolio-header p {
-  color: #e0e6ed;
+  color: #060606;
   font-size: 1.2rem;
 }
 
