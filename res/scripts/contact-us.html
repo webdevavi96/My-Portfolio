@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Avinash Chaurasiya, a full-stack web developer specializing in Django and JavaScript. Explore my projects and skills.">
+    <meta property="og:title" content="Avinash Chaurasiya - Full-Stack Web Developer">
+    <meta property="og:description"
+        content="Portfolio of Avinash Chaurasiya, a full-stack web developer specializing in Django and JavaScript.">
+    <meta property="og:image" content="res/img/assets/userImage.png">
+    <meta property="og:url" content="https://webdevavi96.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>CONTACT US</title>
+    <link rel="icon" href="../img/assets/icon.gif" type="image/gif">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+
+        #nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 7%;
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+            padding: 0px 30px;
+            background: #7c7c7c24;
+            backdrop-filter: blur(20px);
+        }
+
+        #nav>h3 {
+            font-family: gilroy;
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        .nav-links>a {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 50px;
+            background-color: #7c7c7c24;
+            color: #030303;
+            border: none;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #000;
+                color: #f1f1f1;
+            }
+        }
+
+
+        .form-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            padding: 40px;
+        }
+
+        .form {
+            width: 100%;
+            max-width: 600px;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ff7a01;
+        }
+
+        .heading {
+            display: block;
+            color: #111111;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+        }
+
+        .input,
+        .textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #333;
+            font-weight: 600;
+            transition: border 0.3s ease;
+        }
+
+        .input:focus,
+        .textarea:focus {
+            border-color: #ff7a01;
+            outline: none;
+        }
+
+        .textarea {
+            resize: vertical;
+            max-height: 180px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .send-button,
+        .reset-button {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .send-button {
+            background-color: #ff7a01;
+            color: #fff;
+            border: none;
+        }
+
+        .send-button:hover {
+            background-color: #e56b00;
+        }
+
+        .reset-button {
+            background-color: transparent;
+            border: 2px solid #ff7a01;
+            color: #ff7a01;
+        }
+
+        .reset-button:hover {
+            background-color: #ff7a01;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .heading {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <div id="nav">
+        <h3><b style="color: blue;">WEB DEVELOPER</b> &nbsp;<span style="color: red;">AVINASH* </span></h3>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+        </div>
+    </div>
+    <div id="form" class="form-container">
+        <form method="post" id="contactForm" class="form">
+            <span class="heading">GET IN TOUCH</span>
+            <input placeholder="NAME" type="text" class="input" id="name" name="name">
+            <input placeholder="EMAIL" id="email" type="email" name="email" class="input">
+            <textarea placeholder="YOUR MESSAGE" rows="6" cols="30" id="message" name="message"
+                class="textarea"></textarea>
+            <div class="button-container">
+                <button type="submit" class="send-button">SEND</button>
+                <button type="reset" class="reset-button">RESET</button>
+            </div>
+            <div id="status" style="margin-top: 15px; font-weight: bold;"></div>
+
+        </form>
+    </div>
+
+    <hr style="margin: 40px auto; width: 60%; border: 1px solid #ccc;" />
+
+    <footer id="footer"
+        style="background: #f9f9f9; padding: 30px 20px; text-align: center; font-weight: 600; font-size: 16px; color: #111;">
+        <p><i class="fas fa-envelope"></i> EMAIL:
+            <a href="mailto:avinashchaurasiya902@gmail.com" style="color: #ff7a01; text-decoration: none;">
+                avinashchaurasiya902@gmail.com
+            </a>
+        </p>
+        <p><i class="fab fa-linkedin"></i> LINKEDIN:
+            <a href="https://linkedin.com/in/avinash-chaurasiya-72b648247" target="_blank"
+                style="color: #ff7a01; text-decoration: none;">
+                /Avinash Chaurasiya
+            </a>
+        </p>
+        <p><i class="fab fa-github"></i> GitHub:
+            <a href="https://www.github.com/webdevavi96" target="_blank" style="color: #ff7a01; text-decoration: none;">
+                /Avinash Chaurasiya
+            </a>
+        </p>
+        <p><i class="fas fa-coffee"></i> SUPPORT:
+            <a href="https://buymeacoffee.com/webdevavi96" target="_blank"
+                style="color: #ff7a01; text-decoration: none;">
+                Buy Me a Coffee
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        // Animate footer on page load
+        gsap.from("#footer", {
+            duration: 1.2,
+            opacity: 0,
+            y: 50,
+            ease: "power2.out"
+        });
+        gsap.from("#form", {
+            duration: 1.2,
+            opacity: 0,
+            y: 50,
+            ease: "power2.out"
+        });
+        gsap.from("#nav", {
+            duration: 1,
+            opacity: 0,
+            y: -10,
+            ease: "power2.out"
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+   <script src="./form.js"></script>
+</body>
+
+</html>
