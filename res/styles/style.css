@@ -1,285 +1,190 @@
-/* Futuristic Portfolio Theme - Custom CSS */
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
 
+html,
 body {
-  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
-  color: #e0e6ed;
-  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  overflow-x: hidden;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+/* Hide canvas */
+canvas {
+  display: none !important;
+}
+
+#main {
+  overflow: auto;
+  height: auto;
+}
+
+#page,
+#page1,
+#page2,
+#page3 {
+  position: relative !important;
+  height: auto !important;
+  width: 100vw;
+  padding: 60px 20px;
+  margin-bottom: 50px;
+  background-color: #f1f1f1;
 }
 
 
-.logo {
-  height: 30px;
-  width: 30px;
+
+/* Loop text */
+#loop {
+  display: none;
 }
 
-
-.navbar,
-.footer-section {
-  background: rgba(20, 30, 48, 0.95) !important;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.25);
-}
-
-.navbar .navbar-brand,
-.navbar-nav .nav-link {
-  color: #00fff7 !important;
-  letter-spacing: 1px;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.navbar .navbar-brand:hover,
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: #fff200 !important;
-}
-
-.portfolio-header {
-  background: linear-gradient(120deg, #000055 0%, #3c0000 100%);
-  border-bottom: 2px solid #00fff7;
-  box-shadow: 0 4px 32px 0 rgba(0, 255, 247, 0.08);
-}
-
-.portfolio-header img {
-  border: 4px solid #00fff7;
-  box-shadow: 0 0 32px 0 #00fff7;
-}
-
-.portfolio-header h1,
-.portfolio-header h2 {
-  color: #00fff7;
-  text-shadow: 0 2px 8px #00fff7;
-}
-
-.portfolio-header p {
-  color: #060606;
-  font-size: 1.2rem;
-}
-
-.about-section,
-.skills-section,
-.projects-section,
-.contact-section {
-  background: rgba(62, 62, 62, 0.236);
-  /* More transparent */
-  border-radius: 24px;
-  box-shadow: 0 4px 32px 0 rgba(0, 255, 247, 0.04);
-  margin-bottom: 2.5rem;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1.5px solid rgba(0, 255, 247, 0.18);
-}
-
-.about-section h2,
-.skills-section h2,
-.projects-section h2,
-.contact-section h2,
-.about-section p,
-.skills-section p,
-.projects-section p,
-.contact-section p,
-.about-section li,
-.skills-section li,
-.projects-section li,
-.contact-section li,
-.about-section label,
-.skills-section label,
-.projects-section label,
-.contact-section label {
-  color: #eff0f1;
-  text-shadow: 0 2px 8px rgba(11, 19, 22, 0.7);
-}
-
-.skill-card {
-  background: linear-gradient(135deg, #9a9a9a 0%, #2c5364 100%);
-  border: 1px solid #ffffff;
-  border-radius: 18px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.skill-card:hover {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 8px 32px 0 #00fff7;
-}
-
-.skill-card i {
-  filter: drop-shadow(0 0 8px #00fff7);
-}
-
-.project-card {
-  background: linear-gradient(120deg, #232526 0%, #2c5364 100%);
-  border: 1px solid #fff200;
-  border-radius: 18px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px 0 #fff200;
-}
-
-.project-card .card-title {
-  color: #fff200;
-  letter-spacing: 1px;
-}
-
-.project-card .btn-outline-primary {
-  border-color: #00fff7;
-  color: #00fff7;
-  background: transparent;
-  transition: background 0.2s, color 0.2s;
-}
-
-.project-card .btn-outline-primary:hover {
-  background: #00fff7;
-  color: #232526;
-}
-
-.project-card .btn-outline-secondary {
-  border-color: #fff200;
-  color: #fff200;
-  background: transparent;
-}
-
-.project-card .btn-outline-secondary:disabled {
-  opacity: 0.7;
-}
-
-.contact-section .form-control {
-  background: #232526;
-  color: #fff;
-  border: 1px solid #00fff7;
-  border-radius: 8px;
-}
-
-.contact-section .form-control:focus {
-  border-color: #fff200;
-  box-shadow: 0 0 8px #00fff7;
-}
-
-.contact-section .btn-primary {
-  background: linear-gradient(90deg, #00fff7 0%, #fff200 100%);
-  border: none;
-  color: #232526;
-  font-weight: 700;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px #00fff7;
-  transition: background 0.2s, color 0.2s;
-}
-
-.contact-section .btn-primary:hover {
-  background: linear-gradient(90deg, #fff200 0%, #00fff7 100%);
-  color: #232526;
-}
-
-.footer-section {
-  border-top: 2px solid #00fff7;
-  background: linear-gradient(90deg, #232526 0%, #2c5364 100%) !important;
-}
-
-.footer-section a {
-  color: #00fff7;
-  transition: color 0.2s;
-}
-
-.footer-section a:hover {
-  color: #fff200;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  background: #232526;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #00fff7;
-  border-radius: 8px;
-}
-
-/* Futuristic animated header text */
-.futuristic-animate span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px) scale(1.2);
-  animation: futuristicFadeIn 0.6s forwards;
-}
-
-.futuristic-animate span {
-  animation-name: futuristicFadeIn;
-}
-
-@keyframes futuristicFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    color: #fff200;
-    text-shadow: 0 0 8px #00fff7, 0 0 16px #fff200;
-  }
-}
-
-/* Floating particles background */
-.particle-bg {
+/* Navbar container */
+#nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 10px;
+  background: rgba(124, 124, 124, 0.25);
+  /* better RGBA syntax */
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 999;
 }
 
-.particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00fff7 0%, #fff200 100%);
-  opacity: 0.7;
-  animation: floatParticle linear infinite;
+/* Logo text */
+#logo {
+  font-size: 14px;
+  font-weight: 400;
 }
 
-@keyframes floatParticle {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.7;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(-100vh) scale(1.3);
-    opacity: 0.2;
-  }
+#logo-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
 }
 
-/* Ensure content is above particles */
-body>*:not(.particle-bg) {
+/* Nav links container */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+  gap: 50px;
+  white-space: nowrap;
+}
+
+/* Nav links style */
+.nav-links a {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #030303;
+  background-color: rgba(124, 124, 124, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  background-color: #000;
+  color: #f1f1f1;
+}
+
+
+
+/* Page text adjustments */
+#page h3,
+#page h4 {
+  font-size: 14px;
+  top: auto;
+  left: auto;
   position: relative;
-  z-index: 1;
+  text-align: center;
+  margin: 10px 0;
 }
 
-/* Responsive Tweaks */
-@media (max-width: 768px) {
+#page h3 span#name {
+  display: block;
+  color: blueviolet;
+  font-family: cursive;
+  text-decoration: underline;
+  margin-top: 5px;
+}
 
-  .about-section,
-  .skills-section,
-  .projects-section,
-  .contact-section {
-    border-radius: 12px;
-    margin-bottom: 1.2rem;
-  }
+#page1>#right-text,
+#page1>#left-text,
+#page2>#text1,
+#page2>#text2,
+#page3>#text3 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  text-align: left !important;
+  margin-bottom: 20px;
+  width: 100%;
+}
 
-  .portfolio-header img {
-    width: 110px !important;
-    height: 110px !important;
-  }
+#page1>#right-text>h1,
+#page1>#left-text>h1,
+#page2>#text1>h1,
+#page2>#text2>h1,
+#page3>#text3>h1 {
+  font-size: 24px !important;
+  line-height: 1.3;
+}
+
+#page1>#right-text>h3,
+#page1>#left-text>h3,
+#page2>#text1>h3,
+#page2>#text2>h3,
+#page3>#text3>p {
+  font-size: 14px !important;
+  color: #7c7c7c;
+  line-height: 1.4;
+}
+
+#page3>#text3>h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+#text1 {
+  padding: 100px 0;
+}
+
+/* Projects list adjustments */
+.item>p,
+.item>ul>li {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+
+/* Small screen spacing */
+hr {
+  margin: 15px 0;
+}
+
+/* Responsive text in general */
+h1 {
+  font-size: 20px !important;
+}
+
+h3 {
+  font-size: 14px !important;
+}
+
+h4 {
+  font-size: 12px !important;
 }

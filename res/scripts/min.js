@@ -1,3 +1,5 @@
+let locoScroll;
+
 function locomotive() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -446,3 +448,26 @@ gsap.from("#nav", {
   y: -10,
   ease: "power2.out",
 });
+
+function initScrollAnimation() {
+  if (window.innerWidth <= 768) {
+    canvas.style.display = "none";
+    const style = document.querySelector("#css");
+    style.href = "./res/styles/style.css"
+    document.querySelector("#scroll-info").style.display = "none";
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+    if (locoScroll) {
+      locoScroll.destroy();
+      locoScroll = null;
+    }
+
+    return;
+  }
+
+  canvas.style.display = "block";
+  locomotive();
+}
+
+initScrollAnimation()
+window.addEventListener("resize", initScrollAnimation)

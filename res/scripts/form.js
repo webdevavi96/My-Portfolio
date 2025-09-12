@@ -17,19 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       const statusElement = document.getElementById("status");
-      statusElement.innerText = "Sending...";
-      statusElement.style.color = "blue";
+      if (name && email && message) {
+        statusElement.innerText = "Sending...";
+        statusElement.style.color = "blue";
 
-      emailjs
-        .send("service_ue9vxfh", "template_5nezzpy", params)
-        .then(function (response) {
-          statusElement.innerText = "Message sent successfully!";
-          statusElement.style.color = "green";
-          document.getElementById("contactForm").reset();
-        })
-        .catch(function (error) {
-          statusElement.innerText = "Failed to send message. Try again!";
-          statusElement.style.color = "red";
-        });
+        emailjs
+          .send("service_ue9vxfh", "template_5nezzpy", params)
+          .then(function (response) {
+            statusElement.innerText = "Message sent successfully!";
+            statusElement.style.color = "green";
+            document.getElementById("contactForm").reset();
+          })
+          .catch(function (error) {
+            statusElement.innerText = "Failed to send message. Try again!";
+            statusElement.style.color = "red";
+          });
+      } else {
+        statusElement.innerText = "Please fill the all required fields...";
+        statusElement.style.color = "red";
+      }
     });
 });

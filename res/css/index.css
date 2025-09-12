@@ -121,6 +121,14 @@ canvas {
     }
 }
 
+#logo{
+    font-weight: 500;
+}
+
+#logo-name{
+    font-weight: 600;
+}
+
 #page>h3 {
     position: absolute;
     top: 58%;
@@ -230,3 +238,4 @@ canvas {
     font-size: 30px;
     margin-bottom: 10px;
 }
+
