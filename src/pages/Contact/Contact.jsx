@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
+
 
 function Contact() {
   const [status, setStatus] = useState("");
