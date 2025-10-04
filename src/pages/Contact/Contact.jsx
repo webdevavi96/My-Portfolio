@@ -18,7 +18,7 @@ function Contact() {
     setStatusType("submitting");
 
     try {
-      const res = await fetch("/.netlify/functions/sendEmail", {
+      const res = await fetch("/.netlify/functions/sendEmail.js", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -50,10 +50,10 @@ function Contact() {
         {status && (
           <p
             className={`text-center text-xl font-semibold ${statusType === "success"
-                ? "text-green-400"
-                : statusType === "error"
-                  ? "text-red-400"
-                  : "text-yellow-300"
+              ? "text-green-400"
+              : statusType === "error"
+                ? "text-red-400"
+                : "text-yellow-300"
               }`}
           >
             {status}
