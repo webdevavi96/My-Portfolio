@@ -11,17 +11,10 @@ export async function handler(event) {
       process.env.EMAILJS_PUBLIC_KEY
     );
 
-    if (res.status === 200) {
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ message: "Email sent successfully" }),
-      };
-    } else {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ message: "Failed to send email" }),
-      };
-    }
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Email sent successfully!" }),
+    };
   } catch (err) {
     console.error("EmailJS error:", err);
     return {
