@@ -13,30 +13,34 @@ function Contact() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-
   const onSubmit = async (data) => {
     setStatus("Submitting...");
     setStatusType("submitting");
 
     try {
-      const res = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      const result = await res.json();
+      // EmailJS send method
+      const res = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       if (res.status === 200) {
-        setStatus(result.message);
+        setStatus("Email sent successfully ✅");
         setStatusType("success");
         reset();
       } else {
-        setStatus(result.message || "Something went wrong.");
+        setStatus("Failed to send email ❌");
         setStatusType("error");
       }
     } catch (err) {
-      console.error(err);
+      console.error("EmailJS error:", err);
       setStatus("Something went wrong. Please try again later.");
       setStatusType("error");
     }
@@ -49,12 +53,13 @@ function Contact() {
 
         {status && (
           <p
-            className={`text-center text-xl font-semibold ${statusType === "success"
-              ? "text-green-400"
-              : statusType === "error"
+            className={`text-center text-xl font-semibold ${
+              statusType === "success"
+                ? "text-green-400"
+                : statusType === "error"
                 ? "text-red-400"
                 : "text-yellow-300"
-              }`}
+            }`}
           >
             {status}
           </p>
