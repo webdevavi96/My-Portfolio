@@ -8,7 +8,7 @@ export async function handler(event) {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
-      secure: true, // use SSL
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER, // your Gmail
         pass: process.env.EMAIL_PASS, // Gmail App password
@@ -16,15 +16,15 @@ export async function handler(event) {
     });
 
     // ✅ Verify connection (helps debug deployment)
-    await transporter.verify();
-    console.log("✅ SMTP connection verified");
+    // await transporter.verify();
+    // console.log("✅ SMTP connection verified");
 
     // 1️⃣ Send email to yourself
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       replyTo: email,
-      subject: `[Portfolio Contact] ${subject}`,
+      subject: `${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
 
@@ -39,15 +39,15 @@ export async function handler(event) {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: "Email and auto-reply sent successfully!",
+        message: "Email sent Successfully!",
       }),
     };
   } catch (err) {
-    console.error("❌ Email sending error:", err);
+    // console.error("❌ Email sending error:", err);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: "Server error",
+        message: "Internal server error",
         error: err.message,
       }),
     };

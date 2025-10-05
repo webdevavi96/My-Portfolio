@@ -31,7 +31,7 @@ function Contact() {
         setStatusType("success");
         reset();
       } else {
-        setStatus(result.message || "Something went wrong.");
+        setStatus("Something went wrong.");
         setStatusType("error");
       }
     } catch (err) {
