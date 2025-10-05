@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 
 function Navbar() {
     const linkClasses = ({ isActive }) =>
-        `flex items-center gap-1 cursor-pointer px-2 py-1 rounded-md transition-all duration-300 ${
-            isActive
-                ? "bg-cyan-900 text-cyan-400 font-semibold"
-                : "text-white hover:bg-cyan-700 hover:text-cyan-200"
+        `flex items-center gap-1 cursor-pointer px-2 py-1 rounded-md transition-all duration-300 ${isActive
+            ? "bg-cyan-900 text-cyan-400 font-semibold"
+            : "text-white hover:bg-cyan-700 hover:text-cyan-200"
         }`;
 
     const hoverVariants = {
@@ -28,8 +27,9 @@ function Navbar() {
 
                 {/* Logo */}
                 <div className="logo text-2xl font-extrabold font-serif cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 md:mb-0">
-                    Web Dev Avinash
+                    <NavLink to="/">Web Developer Avinash</NavLink>
                 </div>
+
 
                 {/* Navigation */}
                 <div className="flex justify-center md:justify-end w-full md:w-auto gap-1 md:gap-2">
