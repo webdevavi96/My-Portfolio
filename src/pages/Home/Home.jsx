@@ -72,7 +72,7 @@ function Home() {
                 transition={{ delay: 2, duration: 0.8 }}
             >
                 <img
-                    src="images/Avinash.jpg"
+                    src="images/Avinash.png"
                     alt="Avinash Profile"
                     className="rounded-2xl shadow-lg h-72 md:h-96 object-cover"
                 />
