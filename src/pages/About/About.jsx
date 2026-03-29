@@ -16,19 +16,26 @@ function About() {
 
   const skills = {
     "Frontend Development": ["HTML", "CSS", "JavaScript", "React Js", "Tailwind", "Bootstrap"],
-    "Backend Development": ["Python", "Django", "Django REST", "Node Js", "Express Js", "MongoDB"],
-    "Tools & Technologies": ["Git & GitHub", "Postman", "Figma", "MS Office"],
-    "Deployment & Hosting": ["Netlify", "Hostinger", "PythonAnywhere", "FileZilla"]
+    "Backend Development": ["Python", "Django", "Node Js", "Express Js"],
+    "Database": ["MongoDB", "SQLite"],
+    "Tools & Technologies": ["Git & GitHub", "Postman"],
+    "Deployment & Hosting": ["Netlify"]
   };
 
-  const certificates = {
-    "Programming": [
-      "Python Programming (Basics) – United Latino Students Association (Sept 2025)"
-    ],
-    "Web Development": [
-      "Python with Django – Mechatredz Technologies (Sept 2024)"
-    ]
-  };
+  const certificates = [
+    {
+      title: "Python Programming (Basics)",
+      org: "United Latino Students Association",
+      date: "Sept 2025",
+      link: "https://drive.google.com/file/d/1qZkYNbw_fxspPeu5pnQLWqWTmgI0IFZR/view?usp=drive_link"
+    },
+    {
+      title: "Python with Django",
+      org: "Mechatredz Technologies",
+      date: "Sept 2024",
+      link: "https://drive.google.com/file/d/1QG2adFwFm5uUWmYnsW2rzqs1og-Im9iq/view?usp=drive_link"
+    }
+  ];
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-r from-blue-900 via-indigo-900 to-black text-white px-4 md:px-8 py-10">
@@ -45,16 +52,15 @@ function About() {
         </motion.h1>
 
         <motion.div variants={itemVariants} className="text-lg md:text-xl text-gray-300 leading-relaxed space-y-2">
-          <p>
+          <p className="text-start">
             I’m a FUll Stack Web Developer focused on building responsive, user-friendly applications using modern frontend technologies.
           </p>
-          <p>
+          <p className="text-start" >
             I work with REST APIs, Git, and clean coding practices, and enjoy solving real-world problems with efficient and scalable solutions.
           </p>
         </motion.div>
       </motion.div>
 
-      {/* Skills */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -73,7 +79,7 @@ function About() {
                   {items.map((skill, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 text-sm bg-white/10 rounded-full border border-white/20"
+                      className="px-3 py-1 text-sm bg-white/10 rounded-full border border-white/20 hover:bg-pink-500 cursor-pointer"
                     >
                       {skill}
                     </span>
@@ -85,27 +91,37 @@ function About() {
         </Dropdown>
       </motion.div>
 
-      {/* Certificates */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="space-y-4"
       >
-        {Object.entries(certificates).map(([category, certs], i) => (
-          <Dropdown key={i} title={category}>
-            <div className="flex flex-wrap gap-2">
-              {certs.map((cert, index) => (
-                <span
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-4"
+        >
+          <Dropdown title="Certificates">
+            <div className="flex flex-col gap-3">
+              {certificates.map((cert, index) => (
+                <a
                   key={index}
-                  className="px-3 py-1 text-sm bg-white/10 rounded-full border border-white/20 text-gray-200 hover:bg-white/20 transition"
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-white/10 rounded-lg border border-white/20 text-gray-200 hover:bg-pink-500 hover:text-white transition duration-300"
                 >
-                  {cert}
-                </span>
+                  <p className="font-medium">{cert.title}</p>
+                  <p className="text-sm text-gray-400">
+                    {cert.org} • {cert.date}
+                  </p>
+                </a>
               ))}
             </div>
           </Dropdown>
-        ))}
+        </motion.div>
       </motion.div>
 
     </div>

@@ -41,8 +41,8 @@ function Footer() {
           <div className="flex gap-4 text-xl sm:text-2xl">
             <a href="https://facebook.com" className="hover:text-blue-600 transition-colors"><FaFacebook /></a>
             <a href="https://twitter.com" className="hover:text-blue-400 transition-colors"><FaTwitter /></a>
-            <a href="https://instagram.com" className="hover:text-pink-500 transition-colors"><FaInstagram /></a>
-            <a href="https://linkedin.com" className="hover:text-blue-700 transition-colors"><FaLinkedin /></a>
+            <a href="https://instagram.com/chaurasiya_ji.20" className="hover:text-pink-500 transition-colors"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247/" className="hover:text-blue-700 transition-colors"><FaLinkedin /></a>
           </div>
         </div>
       </div>
