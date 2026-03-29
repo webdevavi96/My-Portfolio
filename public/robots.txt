@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary paths (optional)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://webdevavi96.netlify.app/sitemap.xml
