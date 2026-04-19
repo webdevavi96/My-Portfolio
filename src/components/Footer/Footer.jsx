@@ -1,58 +1,87 @@
-import React from 'react'
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto flex flex-col sm:flex-col md:flex-row justify-between flex-wrap gap-8 px-4">
-        {/* Logo / Brand */}
-        <div className="flex-1 min-w-[200px]">
-          <h2 className="text-xl sm:text-2xl font-bold">MyPortfolio</h2>
-          <p className="mt-2 text-gray-400 text-sm sm:text-base">
-            Building modern web experiences
+    <footer className="bg-gradient-to-r from-slate-900 via-slate-800 to-blue-950 text-white mt-16 border-t border-white/10">
+
+      <div className="max-w-6xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
+
+        {/* BRAND */}
+        <div>
+          <h2 className="text-2xl font-bold tracking-wide">
+            <span className="text-white">Avinash</span>
+            <span className="text-cyan-400">.dev</span>
+          </h2>
+
+          <p className="mt-3 text-gray-400 text-sm leading-relaxed">
+            Crafting modern, scalable, and user-friendly web applications.
           </p>
         </div>
 
-        {/* Quick Links */}
-        <div className="flex-1 min-w-[150px]">
-          <h4 className="font-semibold mb-2 text-base sm:text-lg">Quick Links</h4>
-          <ul className="space-y-2 text-sm sm:text-base">
+        {/* LINKS */}
+        <div>
+          <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-3">
+            Navigation
+          </h4>
+
+          <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/" className="hover:text-blue-500 transition-colors">Home</Link>
+              <Link to="/" className="text-gray-300 hover:text-white transition">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-500 transition-colors">About</Link>
+              <Link to="/about" className="text-gray-300 hover:text-white transition">
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/projects" className="hover:text-blue-500 transition-colors">Projects</Link>
+              <Link to="/projects" className="text-gray-300 hover:text-white transition">
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-blue-500 transition-colors">Contact</Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
 
-        {/* Social Media */}
-        <div className="flex-1 min-w-[150px]">
-          <h4 className="font-semibold mb-2 text-base sm:text-lg">Follow Me</h4>
-          <div className="flex gap-4 text-xl sm:text-2xl">
-            <a href="https://facebook.com" className="hover:text-blue-600 transition-colors"><FaFacebook /></a>
-            <a href="https://twitter.com" className="hover:text-blue-400 transition-colors"><FaTwitter /></a>
-            <a href="https://instagram.com/chaurasiya_ji.20" className="hover:text-pink-500 transition-colors"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247/" className="hover:text-blue-700 transition-colors"><FaLinkedin /></a>
+        {/* SOCIAL */}
+        <div>
+          <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-3">
+            Connect
+          </h4>
+
+          <div className="flex gap-4 text-lg">
+            <a href="https://facebook.com" className="text-gray-400 hover:text-blue-500 transition">
+              <FaFacebook />
+            </a>
+            <a href="https://twitter.com" className="text-gray-400 hover:text-blue-400 transition">
+              <FaTwitter />
+            </a>
+            <a href="https://instagram.com/chaurasiya_ji.20" className="text-gray-400 hover:text-pink-500 transition">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247/" className="text-gray-400 hover:text-blue-600 transition">
+              <FaLinkedin />
+            </a>
           </div>
         </div>
+
       </div>
 
-      {/* Copyright */}
-      <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500 text-xs sm:text-sm">
-        © {currentYear} MyPortfolio. All rights reserved.
+      {/* BOTTOM */}
+      <div className="border-t border-white/10 text-center text-gray-500 text-xs py-4">
+        © {currentYear} Avinash.dev — All rights reserved.
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

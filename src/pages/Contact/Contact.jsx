@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
-
 function Contact() {
   const [status, setStatus] = useState("");
   const [statusType, setStatusType] = useState("");
@@ -41,92 +40,123 @@ function Contact() {
     }
   };
 
-
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-900 to-black p-6">
-      <div className="bg-gradient-to-b from-indigo-500 to-black rounded-2xl shadow-2xl p-8 w-full max-w-lg">
-        <h2 className="text-2xl font-bold text-white mb-4">Contact Me</h2>
+    <div className="min-h-screen bg-gradient-to-br from-black via-indigo-950 to-blue-900 text-white px-6 md:px-16 py-12 flex items-center justify-center">
 
-        {status && (
-          <p
-            className={`text-center text-xl font-semibold ${statusType === "success"
-              ? "text-green-400"
-              : statusType === "error"
-                ? "text-red-400"
-                : "text-yellow-300"
-              }`}
-          >
-            {status}
+      <div className="grid md:grid-cols-2 gap-10 max-w-6xl w-full">
+
+        {/* LEFT SIDE (INFO) */}
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Let’s Connect
+          </h1>
+
+          <p className="text-gray-300 text-lg">
+            Have a project, idea, or opportunity?
+            I’d love to hear from you. Fill out the form and I’ll get back to you soon.
           </p>
-        )}
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          <div>
-            <label className="block text-white font-medium">Name</label>
-            <input
-              type="text"
-              {...register("name", { required: "Name is required" })}
-              className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your name"
-            />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
-            )}
+          <div className="space-y-3 text-sm text-gray-400">
+            <p>📧 Email: avinashchaurasiya901@gmail.com</p>
+            <p>🌐 Portfolio: https://webdevavi96.netlify.app/</p>
+            <p>💼 Open for freelance & full-time roles</p>
           </div>
+        </div>
 
-          <div>
-            <label className="block text-white font-medium">Email</label>
-            <input
-              type="email"
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: "Enter a valid email",
-                },
-              })}
-              className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your email"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
-            )}
-          </div>
+        {/* RIGHT SIDE (FORM) */}
+        <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl">
 
-          <div>
-            <label className="block text-white font-medium">Subject</label>
-            <input
-              type="text"
-              {...register("subject", { required: "Subject is required" })}
-              className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Subject"
-            />
-            {errors.subject && (
-              <p className="text-red-500 text-sm">{errors.subject.message}</p>
-            )}
-          </div>
+          <h2 className="text-2xl font-semibold mb-4">Contact Form</h2>
 
-          <div>
-            <label className="block text-white font-medium">Message</label>
-            <textarea
-              rows="4"
-              {...register("message", { required: "Message is required" })}
-              className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your message..."
-            />
-            {errors.message && (
-              <p className="text-red-500 text-sm">{errors.message.message}</p>
-            )}
-          </div>
+          {/* STATUS */}
+          {status && (
+            <p
+              className={`text-sm mb-4 font-medium ${statusType === "success"
+                  ? "text-green-400"
+                  : statusType === "error"
+                    ? "text-red-400"
+                    : "text-yellow-300"
+                }`}
+            >
+              {status}
+            </p>
+          )}
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-indigo-700 transition disabled:opacity-50"
-          >
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </button>
-        </form>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+
+            {/* NAME */}
+            <div>
+              <label className="text-sm text-gray-300">Name</label>
+              <input
+                type="text"
+                {...register("name", { required: "Name is required" })}
+                placeholder="John Doe"
+                className="w-full mt-1 p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-pink-500 text-white"
+              />
+              {errors.name && (
+                <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
+              )}
+            </div>
+
+            {/* EMAIL */}
+            <div>
+              <label className="text-sm text-gray-300">Email</label>
+              <input
+                type="email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Enter a valid email",
+                  },
+                })}
+                placeholder="you@example.com"
+                className="w-full mt-1 p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-pink-500 text-white"
+              />
+              {errors.email && (
+                <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
+              )}
+            </div>
+
+            {/* SUBJECT */}
+            <div>
+              <label className="text-sm text-gray-300">Subject</label>
+              <input
+                type="text"
+                {...register("subject", { required: "Subject is required" })}
+                placeholder="Project discussion"
+                className="w-full mt-1 p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-pink-500 text-white"
+              />
+              {errors.subject && (
+                <p className="text-red-400 text-xs mt-1">{errors.subject.message}</p>
+              )}
+            </div>
+
+            {/* MESSAGE */}
+            <div>
+              <label className="text-sm text-gray-300">Message</label>
+              <textarea
+                rows="4"
+                {...register("message", { required: "Message is required" })}
+                placeholder="Tell me about your idea..."
+                className="w-full mt-1 p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-pink-500 text-white"
+              />
+              {errors.message && (
+                <p className="text-red-400 text-xs mt-1">{errors.message.message}</p>
+              )}
+            </div>
+
+            {/* BUTTON */}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full py-3 rounded-lg font-semibold bg-pink-500 hover:bg-pink-600 transition disabled:opacity-50"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+
+          </form>
+        </div>
       </div>
     </div>
   );

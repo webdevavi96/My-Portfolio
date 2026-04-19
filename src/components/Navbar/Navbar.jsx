@@ -1,18 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { MdHome } from "react-icons/md";
-import { FcBusinessman, FcFolder, FcFeedback } from "react-icons/fc";
 import { motion } from "framer-motion";
 
 function Navbar() {
     const linkClasses = ({ isActive }) =>
-        `flex items-center gap-1 cursor-pointer px-2 py-1 rounded-md transition-all duration-300 ${isActive
-            ? "bg-cyan-900 text-cyan-400 font-semibold"
-            : "text-white hover:bg-cyan-700 hover:text-cyan-200"
+        `relative px-3 py-1.5 rounded-md text-sm md:text-base transition-all duration-300 ${isActive
+            ? "text-cyan-400 font-semibold"
+            : "text-gray-300 hover:text-white"
         }`;
 
     const hoverVariants = {
-        hover: { scale: 1.1 },
+        hover: { y: -2 },
         tap: { scale: 0.95 },
     };
 
@@ -20,42 +18,45 @@ function Navbar() {
         <motion.nav
             initial={{ y: -60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
-            className="sticky top-0 left-0 w-full z-50 backdrop-blur-md bg-gradient-to-r from-slate-900 via-slate-800 to-blue-950 shadow-lg"
+            transition={{ duration: 0.6 }}
+            className="sticky top-0 left-0 w-full z-50 backdrop-blur-md bg-gradient-to-r from-slate-900 via-slate-800 to-blue-950 border-b border-white/10"
         >
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between h-auto px-6 py-2 md:h-16">
+            <div className="container mx-auto flex md:flex-row flex-col items-center justify-between px-6 py-3 md:h-16">
 
-                {/* Logo */}
-                <div className="logo text-2xl font-extrabold font-serif cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 md:mb-0">
-                    <NavLink to="/">Web Developer Avinash</NavLink>
+                {/* LOGO */}
+                <div className="text-xl md:text-2xl font-bold tracking-wide text-white">
+                    <NavLink to="/" className="hover:text-cyan-400 transition">
+                        Avinash.dev
+                    </NavLink>
                 </div>
 
+                {/* NAV LINKS */}
+                <div className="flex items-center gap-4 md:gap-6">
 
-                {/* Navigation */}
-                <div className="flex justify-center md:justify-end w-full md:w-auto gap-1 md:gap-2">
                     <motion.div whileHover="hover" whileTap="tap" variants={hoverVariants}>
                         <NavLink to="/" className={linkClasses}>
-                            <MdHome size={20} /> Home
+                            Home
                         </NavLink>
                     </motion.div>
 
                     <motion.div whileHover="hover" whileTap="tap" variants={hoverVariants}>
                         <NavLink to="/about" className={linkClasses}>
-                            <FcBusinessman size={20} /> About
+                            About
                         </NavLink>
                     </motion.div>
 
                     <motion.div whileHover="hover" whileTap="tap" variants={hoverVariants}>
                         <NavLink to="/projects" className={linkClasses}>
-                            <FcFolder size={20} /> Projects
+                            Projects
                         </NavLink>
                     </motion.div>
 
                     <motion.div whileHover="hover" whileTap="tap" variants={hoverVariants}>
                         <NavLink to="/contact" className={linkClasses}>
-                            <FcFeedback size={20} /> Contact
+                            Contact
                         </NavLink>
                     </motion.div>
+
                 </div>
             </div>
         </motion.nav>

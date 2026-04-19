@@ -5,14 +5,17 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 
 function Layout() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-black via-indigo-950 to-blue-900 text-white">
+
       <Navbar />
-      <main className='h-auto w-full bg-black text-white'>
+
+      <main className="flex-1 w-full">
         <Outlet />
       </main>
+
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
 
 function App() {
