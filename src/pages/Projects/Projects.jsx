@@ -50,6 +50,13 @@ function Projects() {
       tech: ["MongoDB", "Express", "React", "Node"],
       github: "https://github.com/webdevavi96/Alumni_Meet",
     },
+    {
+      title: "Anima",
+      description:
+        "A modern Chrome Extension for anime lovers with browser shortcuts, live weather forcast and live time display.",
+      tech: ["HTML", "Open Weather API", "JSON", "web workers"],
+      github: "https://github.com/webdevavi96/Anima",
+    },
   ];
 
   return (
