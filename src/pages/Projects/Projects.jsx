@@ -57,6 +57,15 @@ function Projects() {
       tech: ["HTML", "Open Weather API", "JSON", "web workers"],
       github: "https://github.com/webdevavi96/Anima",
     },
+    {
+      title: "FX Tab",
+      description:
+        "A Chrome extension for enhanced tabbed browsing and workspace management.",
+      features: ["Tab Organization", "Quick Navigation", "Tab Grouping", "Custom Shortcuts"],
+      permissions: ["activeTab", "tabs", "storage"],
+      tech: ["HTML", "JSON", "web workers"],
+      github: "https://github.com/webdevavi96/FXTab",
+    },
   ];
 
   return (
@@ -93,7 +102,7 @@ function Projects() {
             key={index}
             variants={item}
             whileHover={{ scale: 1.03 }}
-            className={`rounded-xl p-5 border border-white/10 bg-white/5 hover:bg-white/10 transition flex flex-col justify-between ${project.featured ? "lg:col-span-2" : ""
+            className={`rounded-xl p-5 border border-white/10 flex flex-col justify-between ${project.featured ? "lg:col-span-2" : ""
               }`}
           >
             <div className="space-y-3">
@@ -103,7 +112,31 @@ function Projects() {
                 {project.description}
               </p>
 
+              <div className="flex flex-wrap gap-2 pt-2">
+                {project.features?.map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-2 py-1 bg-fuchsia-600 rounded border border-white/20"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                {project.permissions?.map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-2 py-1 bg-green-800 rounded border border-white/20"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+
               {/* TECH STACK */}
+              
               <div className="flex flex-wrap gap-2 pt-2">
                 {project.tech.map((t, i) => (
                   <span

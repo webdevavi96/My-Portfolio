@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -70,6 +70,9 @@ function Footer() {
             </a>
             <a href="https://www.linkedin.com/in/avinash-chaurasiya-72b648247/" className="text-gray-400 hover:text-blue-600 transition">
               <FaLinkedin />
+            </a>
+            <a href="https://github.com/webdevavi96" className="text-gray-400 hover:text-black transition">
+              <FaGithub />
             </a>
           </div>
         </div>
