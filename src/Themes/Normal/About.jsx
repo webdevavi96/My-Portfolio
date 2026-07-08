@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { skills, certificates } from "../../shared/data"
 
 function About() {
   const container = {
@@ -12,28 +13,7 @@ function About() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const skills = {
-    Frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "Bootstrap"],
-    Backend: ["Python", "Django", "Node.js", "Express"],
-    Database: ["MongoDB", "SQLite"],
-    Tools: ["Git", "GitHub", "Postman"],
-    Deployment: ["Netlify"],
-  };
 
-  const certificates = [
-    {
-      title: "Python Programming (Basics)",
-      org: "United Latino Students Association",
-      date: "Sept 2025",
-      link: "https://drive.google.com/file/d/1qZkYNbw_fxspPeu5pnQLWqWTmgI0IFZR/view",
-    },
-    {
-      title: "Python with Django",
-      org: "Mechatredz Technologies",
-      date: "Sept 2024",
-      link: "https://drive.google.com/file/d/1QG2adFwFm5uUWmYnsW2rzqs1og-Im9iq/view",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-indigo-950 to-blue-900 text-white px-6 md:px-16 py-12">

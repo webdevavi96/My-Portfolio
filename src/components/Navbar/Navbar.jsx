@@ -2,6 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import ThemeSelector from "../../Themes/ThemeSelecter";
+
+
 function Navbar() {
     const linkClasses = ({ isActive }) =>
         `relative px-3 py-1.5 rounded-md text-sm md:text-base transition-all duration-300 ${isActive
@@ -13,6 +16,7 @@ function Navbar() {
         hover: { y: -2 },
         tap: { scale: 0.95 },
     };
+
 
     return (
         <motion.nav
@@ -55,6 +59,9 @@ function Navbar() {
                         <NavLink to="/contact" className={linkClasses}>
                             Contact
                         </NavLink>
+                    </motion.div>
+                    <motion.div whileHover="hover" whileTap="tap" variants={hoverVariants}>
+                        <ThemeSelector/>
                     </motion.div>
 
                 </div>

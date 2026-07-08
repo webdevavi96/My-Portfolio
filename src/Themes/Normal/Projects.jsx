@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {projects} from "../../shared/data"
 
 function Projects() {
   const container = {
@@ -19,54 +20,6 @@ function Projects() {
     },
   };
 
-  const projects = [
-    {
-      title: "Travel Vista",
-      description:
-        "A full-stack Django travel planner with authentication, destination browsing, and dynamic rendering.",
-      tech: ["Django", "Python", "HTML", "CSS", "JS"],
-      github: "https://github.com/webdevavi96/Travel-Vista",
-      featured: true,
-    },
-    {
-      title: "Weather App",
-      description:
-        "Real-time weather app using API integration with responsive UI and async data handling.",
-      tech: ["JavaScript", "API", "CSS"],
-      demo: "https://my-weather-india.netlify.app/",
-      github: "https://github.com/webdevavi96/Weather-App",
-    },
-    {
-      title: "Jarvis Voice Assistant",
-      description:
-        "Python-based voice assistant capable of executing system tasks and web automation.",
-      tech: ["Python", "Speech Recognition"],
-      github: "https://github.com/webdevavi96/Jarvis-Voice-Assistant",
-    },
-    {
-      title: "Alumni Meet",
-      description:
-        "MERN stack platform connecting students and alumni with blogs, events, and upcoming chat system.",
-      tech: ["MongoDB", "Express", "React", "Node"],
-      github: "https://github.com/webdevavi96/Alumni_Meet",
-    },
-    {
-      title: "Anima",
-      description:
-        "A modern Chrome Extension for anime lovers with browser shortcuts, live weather forcast and live time display.",
-      tech: ["HTML", "Open Weather API", "JSON", "web workers"],
-      github: "https://github.com/webdevavi96/Anima",
-    },
-    {
-      title: "FX Tab",
-      description:
-        "A Chrome extension for enhanced tabbed browsing and workspace management.",
-      features: ["Tab Organization", "Quick Navigation", "Tab Grouping", "Custom Shortcuts"],
-      permissions: ["activeTab", "tabs", "storage"],
-      tech: ["HTML", "JSON", "web workers"],
-      github: "https://github.com/webdevavi96/FXTab",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-indigo-950 to-blue-900 text-white px-6 md:px-16 py-12">
