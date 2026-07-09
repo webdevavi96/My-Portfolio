@@ -21,7 +21,7 @@ function Layout() {
     );
 }
 
-function App() {
+function NormalApp() {
 
     const [loading, setLoading] = useState(true)
 
@@ -47,4 +47,4 @@ function App() {
     return <RouterProvider router={router} />
 }
 
-export default App
+export default NormalApp
