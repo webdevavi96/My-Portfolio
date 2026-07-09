@@ -361,6 +361,12 @@ export default function Win95App() {
                                 </div>
                             </fieldset>
 
+                            {/* Switch theme type */}
+                            <fieldset className="border-2 border-[#dfdfdf] [border-style:groove] p-3">
+                                <legend className="px-1.5 font-bold">Switch Theme</legend>
+                                <ThemeSelector />
+                            </fieldset>
+
                             {/* Custom Retro Sound Setting */}
                             <fieldset className="border-2 border-[#dfdfdf] [border-style:groove] p-3">
                                 <legend className="px-1.5 font-bold">Audio Synthesizer</legend>
