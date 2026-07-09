@@ -20,7 +20,7 @@ export default function ThemeSelector() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setOpen((prev) => !prev)}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md text-gray-800 hover:text-gray-900 hover:bg-white/10 transition"
             >
                 <span>{currentTheme.icon}</span>
                 <span>{currentTheme.name}</span>
@@ -52,7 +52,7 @@ export default function ThemeSelector() {
                                 className={`flex w-full items-center gap-3 px-4 py-3 text-left transition
                                     ${theme === item.id
                                         ? "bg-cyan-500/20 text-cyan-400"
-                                        : "text-gray-300 hover:bg-white/10 hover:text-white"
+                                        : "text-white hover:bg-white/10 hover:text-gray-300"
                                     }`}
                             >
                                 <span>{item.icon}</span>
