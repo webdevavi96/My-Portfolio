@@ -1,6 +1,6 @@
 import { useTheme } from "./ThemeProvider";
 
-import NormalApp from "./normal/App";
+import NormalApp from "./Normal/App";
 import Win95App from "./win95/App"
 
 export default function ThemeRenderer() {
