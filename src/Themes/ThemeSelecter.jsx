@@ -13,6 +13,8 @@ export default function ThemeSelector() {
     const [open, setOpen] = useState(false);
 
     const currentTheme = themes.find((t) => t.id === theme);
+    
+    
 
     return (
         <div className="relative">
@@ -20,7 +22,7 @@ export default function ThemeSelector() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setOpen((prev) => !prev)}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-md text-gray-800 hover:text-gray-900 hover:bg-white/10 transition"
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${currentTheme.id === "win95" ? "text-black" : "text-white"} hover:text-gray-200 hover:bg-white/10 transition`}
             >
                 <span>{currentTheme.icon}</span>
                 <span>{currentTheme.name}</span>
