@@ -51,6 +51,22 @@ const certificates = [
 
 const projects = [
   {
+    title: "Chemistry Lab Simulator",
+    description:
+      "A Chemistry lab simulation app where users can perform chemical reactions with 118 Elements and 71 Compounds.",
+    features: [
+      "Chemistry Simulation",
+      "Real Life experimental properties",
+      "Elements Information",
+      "Open Source and Free",
+    ],
+    tech: ["Kotlin", "JetPack Compose"],
+    permissions: ["No Permission needed"],
+    github: "https://github.com/webdevavi96/ChemLab",
+    demo: "https://github.com/webdevavi96/ChemLab/releases/tag/v1.0.0",
+    featured: true,
+  },
+  {
     title: "Travel Vista",
     description:
       "A full-stack Django travel planner with authentication, destination browsing, and dynamic rendering.",
